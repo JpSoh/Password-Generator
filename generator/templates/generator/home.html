@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="mb-3">Password Generator</h1>
+        <form action="{% url 'password' %}"> <!--Move to HMTL Password -->
+            <select name="length">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12" selected="selected">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+            </select> Length
+            <br>
+            <input type="checkbox" id="check-upper" name="uppercase">
+            <label for="check-upper">Uppercase</label>
+            <br>
+            <input type="checkbox" id="check-numbers" name="numbers">
+            <label for="check-numbers">Numbers</label>
+            <br>
+            <input type="checkbox" id="check-special" name="special">
+            <label for="check-special">Special Characters</label>
+            <br>
+            <input class="mt-5 btn btn-primary" type="submit" value="Generate Password">
+        </form>
+        <a href="{% url 'about' %}">About me</a>
+    </div>
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
